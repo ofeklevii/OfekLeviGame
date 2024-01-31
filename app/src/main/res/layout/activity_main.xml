@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/tV3"
+        android:layout_width="53dp"
+        android:layout_height="wrap_content"
+        android:text="randomNumber3"
+        app:layout_constraintEnd_toStartOf="@+id/tV5"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/tV1"
+        app:layout_constraintTop_toTopOf="@+id/tV1" />
+
+    <TextView
+        android:id="@+id/tV5"
+        android:layout_width="53dp"
+        android:layout_height="54dp"
+        android:text="randomNumber5"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/tV3"
+        app:layout_constraintTop_toTopOf="@+id/tV1" />
+
+    <TextView
+        android:id="@+id/tV1"
+        android:layout_width="53dp"
+        android:layout_height="54dp"
+        android:layout_marginTop="24dp"
+        android:text="randomNumber1"
+        app:layout_constraintEnd_toStartOf="@+id/tV3"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tV2"
+        android:layout_width="53dp"
+        android:layout_height="54dp"
+        android:layout_marginTop="24dp"
+        android:text="randomNumber2"
+        app:layout_constraintEnd_toEndOf="@+id/tV1"
+        app:layout_constraintStart_toStartOf="@+id/tV1"
+        app:layout_constraintTop_toBottomOf="@+id/tV1" />
+
+    <TextView
+        android:id="@+id/tV4"
+        android:layout_width="53dp"
+        android:layout_height="54dp"
+        android:layout_marginTop="24dp"
+        android:text="randomNumber4"
+        app:layout_constraintEnd_toEndOf="@+id/tV3"
+        app:layout_constraintStart_toStartOf="@+id/tV3"
+        app:layout_constraintTop_toBottomOf="@+id/tV3" />
+
+    <TextView
+        android:id="@+id/tV6"
+        android:layout_width="53dp"
+        android:layout_height="54dp"
+        android:layout_marginTop="24dp"
+        android:text="randomNumber6"
+        app:layout_constraintEnd_toEndOf="@+id/tV5"
+        app:layout_constraintStart_toStartOf="@+id/tV5"
+        app:layout_constraintTop_toBottomOf="@+id/tV5" />
+
+    <EditText
+        android:id="@+id/eT2"
+        android:layout_width="53dp"
+        android:layout_height="54dp"
+        android:layout_marginTop="24dp"
+        android:ems="10"
+        android:inputType="number"
+        app:layout_constraintEnd_toEndOf="@+id/tV4"
+        app:layout_constraintStart_toStartOf="@+id/tV4"
+        app:layout_constraintTop_toBottomOf="@+id/tV4" />
+
+    <EditText
+        android:id="@+id/eD1"
+        android:layout_width="53dp"
+        android:layout_height="54dp"
+        android:layout_marginTop="24dp"
+        android:ems="10"
+        android:inputType="number"
+        app:layout_constraintEnd_toEndOf="@+id/tV2"
+        app:layout_constraintStart_toStartOf="@+id/tV2"
+        app:layout_constraintTop_toBottomOf="@+id/tV2" />
+
+    <EditText
+        android:id="@+id/eT3"
+        android:layout_width="53dp"
+        android:layout_height="54dp"
+        android:layout_marginTop="24dp"
+        android:ems="10"
+        android:inputType="number"
+        app:layout_constraintEnd_toEndOf="@+id/tV6"
+        app:layout_constraintStart_toStartOf="@+id/tV6"
+        app:layout_constraintTop_toBottomOf="@+id/tV6" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
