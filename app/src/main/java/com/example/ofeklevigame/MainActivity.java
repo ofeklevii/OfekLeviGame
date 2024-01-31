@@ -69,5 +69,5 @@ public class MainActivity extends AppCompatActivity {
         Random rand = new Random();
         return (int)Math.floor(Math.random() * (89) + 10);
     }
-
+    //
 }
