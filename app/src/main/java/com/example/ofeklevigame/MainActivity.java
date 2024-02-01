@@ -3,71 +3,146 @@ package com.example.ofeklevigame;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
+import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import java.util.Random;
 
 public class MainActivity extends AppCompatActivity {
-    private TextView tV1;
-    private TextView tV2;
-    private TextView tV3;
-    private TextView tV4;
-    private TextView tV5;
-    private TextView tV6;
-    private EditText eT1;
-    private EditText eT2;
-    private EditText eT3;
+    private TextView tv1;
+    private TextView tv2;
+    private TextView tv3;
+    private TextView tv4;
+    private TextView tv5;
+    private TextView tv6;
+    private EditText et1;
+    private EditText et2;
+    private EditText et3;
     private Button btn1;
     private Button btn2;
     private Button btn3;
     private Button btn4;
-    private ImageView iV1;
-    private ImageView iV2;
-    private ImageView iV3;
-
+    private ImageView wrong1;
+    private ImageView wrong2;
+    private ImageView wrong3;
+    private int rand_num1;
+    private int rand_num2;
+    private int rand_num3;
+    private int rand_num4;
+    private int rand_num5;
+    private int rand_num6;
+    int sum;
+    double score;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        tV1 = findViewById(R.id.tV1);
-        tV2 = findViewById(R.id.tV2);
-        tV3 = findViewById(R.id.tV3);
-        tV4 = findViewById(R.id.tV4);
-        tV5 = findViewById(R.id.tV5);
-        tV6 = findViewById(R.id.tV6);
-        eT1 = findViewById(R.id.eT1);
-        eT2 = findViewById(R.id.eT2);
-        eT3 = findViewById(R.id.eT3);
+        tv1 = findViewById(R.id.tV1);
+        tv2 = findViewById(R.id.tV2);
+        tv3 = findViewById(R.id.tV3);
+        tv4 = findViewById(R.id.tV4);
+        tv5 = findViewById(R.id.tV5);
+        tv6 = findViewById(R.id.tV6);
+        et1 = findViewById(R.id.eT1);
+        et2 = findViewById(R.id.eT2);
+        et3 = findViewById(R.id.eT3);
         btn1 = findViewById(R.id.btn1);
         btn2 = findViewById(R.id.btn2);
         btn3 = findViewById(R.id.btn3);
         btn4 = findViewById(R.id.btn4);
-        iV1 = findViewById(R.id.iV1);
-        iV2 = findViewById(R.id.iV2);
-        iV3 = findViewById(R.id.iV3);
+        wrong1 = findViewById(R.id.iV1);
+        wrong2 = findViewById(R.id.iV2);
+        wrong3 = findViewById(R.id.iV3);
 
-        int random_number1 = get_randomNum();
-        int random_number2 = get_randomNum();
-        int random_number3 = get_randomNum();
-        int random_number4 = get_randomNum();
-        int random_number5 = get_randomNum();
-        int random_number6 = get_randomNum();
+        rand_num1 = get_randNum();
+        rand_num2 = get_randNum();
+        rand_num3 = get_randNum();
+        rand_num4 = get_randNum();
+        rand_num5 = get_randNum();
+        rand_num6 = get_randNum();
 
-        tV1.setText("" + random_number1);
-        tV2.setText("" + random_number2);
-        tV3.setText("" + random_number3);
-        tV4.setText("" + random_number4);
-        tV5.setText("" + random_number5);
-        tV6.setText("" + random_number6);
+        tv1.setText("" + rand_num1);
+        tv2.setText("" + rand_num2);
+        tv3.setText("" + rand_num3);
+        tv4.setText("" + rand_num4);
+        tv5.setText("" + rand_num5);
+        tv6.setText("" + rand_num6);
+
     }
 
-    public static int get_randomNum()
+    public static int get_randNum()
     {
-        Random rand = new Random();
+        Random randomNumber = new Random();
         return (int)Math.floor(Math.random() * (89) + 10);
     }
 
+    public void check1(View view)
+    {
+        et1 = findViewById(R.id.eT1);
+        String answer1 = et1.getText().toString();
+        wrong1.setVisibility(view.VISIBLE);
+        if ( Integer.parseInt(answer1) != (rand_num1 + rand_num2))
+            wrong1.setImageResource(R.drawable.redx);
+        else
+        {
+            wrong1.setImageResource(R.drawable.greentick1);
+            sum++;
+        }
+    }
+
+    public void check2(View view) {
+        et2 = findViewById(R.id.eT2);
+        String answer2 = et2.getText().toString();
+        wrong2.setVisibility(view.VISIBLE);
+        if ( Integer.parseInt(answer2) != (rand_num3 + rand_num4))
+            wrong2.setImageResource(R.drawable.redx);
+        else
+        {
+            wrong2.setImageResource(R.drawable.greentick1);
+            sum++;
+        }
+    }
+
+    public void check3(View view) {
+        et3 = findViewById(R.id.eT3);
+        String answer3 = et3.getText().toString();
+        wrong3.setVisibility(view.VISIBLE);
+        if (Integer.parseInt(answer3) != (rand_num5 + rand_num6))
+            wrong3.setImageResource(R.drawable.redx);
+        else {
+            wrong3.setImageResource(R.drawable.greentick1);
+            sum++;
+        }
+    }
+    public void restart(View view) {
+        wrong1.setVisibility(View.INVISIBLE);
+        wrong2.setVisibility(View.INVISIBLE);
+        wrong3.setVisibility(View.INVISIBLE);
+
+        rand_num1 = get_randNum();
+        rand_num2 = get_randNum();
+        rand_num3 = get_randNum();
+        rand_num4 = get_randNum();
+        rand_num5 = get_randNum();
+        rand_num6 = get_randNum();
+
+        tv1.setText("" + rand_num1);
+        tv2.setText("" + rand_num2);
+        tv3.setText("" + rand_num3);
+        tv4.setText("" + rand_num4);
+        tv5.setText("" + rand_num5);
+        tv6.setText("" + rand_num6);
+
+        et1.setText(null);
+        et2.setText(null);
+        et3.setText(null);
+
+        score = ((double)sum/3) *100;
+        Toast.makeText(MainActivity.this, (sum+ "/3, "+score+"%"), Toast.LENGTH_SHORT).show();
+        sum = 0;
+    }
 }

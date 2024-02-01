@@ -73,6 +73,7 @@
         android:layout_height="70dp"
         android:layout_marginTop="42dp"
         android:src="@drawable/redx"
+        android:visibility="invisible"
         app:layout_constraintEnd_toEndOf="@+id/eT1"
         app:layout_constraintStart_toStartOf="@+id/eT1"
         app:layout_constraintTop_toBottomOf="@+id/eT1" />
@@ -83,6 +84,7 @@
         android:layout_height="70dp"
         android:layout_marginTop="42dp"
         android:src="@drawable/redx"
+        android:visibility="invisible"
         app:layout_constraintEnd_toEndOf="@+id/eT2"
         app:layout_constraintStart_toStartOf="@+id/eT2"
         app:layout_constraintTop_toBottomOf="@+id/eT2" />
@@ -93,6 +95,7 @@
         android:layout_height="70dp"
         android:layout_marginTop="42dp"
         android:src="@drawable/redx"
+        android:visibility="invisible"
         app:layout_constraintEnd_toEndOf="@+id/eT3"
         app:layout_constraintStart_toStartOf="@+id/eT3"
         app:layout_constraintTop_toBottomOf="@+id/eT3" />
@@ -103,6 +106,7 @@
         android:layout_height="70dp"
         android:layout_marginTop="42dp"
         android:text="Button"
+        android:onClick="check1"
         app:layout_constraintEnd_toEndOf="@+id/iV1"
         app:layout_constraintStart_toStartOf="@+id/iV1"
         app:layout_constraintTop_toBottomOf="@+id/iV1" />
@@ -113,6 +117,7 @@
         android:layout_height="70dp"
         android:layout_marginTop="42dp"
         android:text="Button"
+        android:onClick="check2"
         app:layout_constraintEnd_toEndOf="@+id/iV2"
         app:layout_constraintStart_toStartOf="@+id/iV2"
         app:layout_constraintTop_toBottomOf="@+id/iV2" />
@@ -123,6 +128,7 @@
         android:layout_height="70dp"
         android:layout_marginTop="42dp"
         android:text="Button"
+        android:onClick="check3"
         app:layout_constraintEnd_toEndOf="@+id/iV3"
         app:layout_constraintStart_toStartOf="@+id/iV3"
         app:layout_constraintTop_toBottomOf="@+id/iV3" />
@@ -133,6 +139,7 @@
         android:layout_height="70dp"
         android:layout_marginTop="16dp"
         android:text="Next"
+        android:onClick="restart"
         app:layout_constraintEnd_toEndOf="@+id/btn3"
         app:layout_constraintStart_toStartOf="@+id/btn1"
         app:layout_constraintTop_toBottomOf="@+id/btn2" />
