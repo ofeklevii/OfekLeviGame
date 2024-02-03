@@ -73,7 +73,7 @@ public class MainActivity extends AppCompatActivity {
     public static int get_randNum()
     {
         Random randomNumber = new Random();
-        return (int)Math.floor(Math.random() * (89) + 10);
+        return (int)(Math.random() * 89 + 10);
     }
 
     public void check1(View view)
