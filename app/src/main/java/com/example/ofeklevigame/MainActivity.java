@@ -60,17 +60,13 @@ public class MainActivity extends AppCompatActivity {
 
         rand_num1 = get_randNum();
         rand_num2 = get_randNum();
-        rand_num3 = get_randNum();
-        rand_num4 = get_randNum();
-        rand_num5 = get_randNum();
-        rand_num6 = get_randNum();
 
         tv1.setText("" + rand_num1);
         tv2.setText("" + rand_num2);
-        tv3.setText("" + rand_num3);
-        tv4.setText("" + rand_num4);
-        tv5.setText("" + rand_num5);
-        tv6.setText("" + rand_num6);
+        tv3.setText("number");
+        tv4.setText("number");
+        tv5.setText("number");
+        tv6.setText("number");
 
     }
 
@@ -92,9 +88,14 @@ public class MainActivity extends AppCompatActivity {
             wrong1.setImageResource(R.drawable.greentick1);
             sum++;
         }
+        rand_num3 = (rand_num1 + rand_num2);
+        rand_num4 = get_randNum();
+        tv3.setText("" + rand_num3);
+        tv4.setText("" + rand_num4);
     }
 
-    public void check2(View view) {
+    public void check2(View view)
+    {
         et2 = findViewById(R.id.eT2);
         String answer2 = et2.getText().toString();
         wrong2.setVisibility(view.VISIBLE);
@@ -105,18 +106,31 @@ public class MainActivity extends AppCompatActivity {
             wrong2.setImageResource(R.drawable.greentick1);
             sum++;
         }
+        rand_num5 = (rand_num3 + rand_num4);
+        rand_num6 = get_randNum();
+        tv5.setText("" + rand_num5);
+        tv6.setText("" + rand_num6);
     }
 
-    public void check3(View view) {
+    public void check3(View view)
+    {
         et3 = findViewById(R.id.eT3);
         String answer3 = et3.getText().toString();
         wrong3.setVisibility(view.VISIBLE);
         if (Integer.parseInt(answer3) != (rand_num5 + rand_num6))
+        {
             wrong3.setImageResource(R.drawable.redx);
+            rand_num1 = (rand_num5 + rand_num6);
+        }
         else {
             wrong3.setImageResource(R.drawable.greentick1);
             sum++;
         }
+        score = ((double)sum/3) *100;
+        Toast.makeText(MainActivity.this, (sum+ "/3, "+score+"%"), Toast.LENGTH_SHORT).show();
+        sum = 0;
+        rand_num1 = (rand_num5 + rand_num6);
+        tv1.setText("" + rand_num1);
     }
     public void restart(View view) {
         wrong1.setVisibility(View.INVISIBLE);
@@ -125,24 +139,16 @@ public class MainActivity extends AppCompatActivity {
 
         rand_num1 = get_randNum();
         rand_num2 = get_randNum();
-        rand_num3 = get_randNum();
-        rand_num4 = get_randNum();
-        rand_num5 = get_randNum();
-        rand_num6 = get_randNum();
 
         tv1.setText("" + rand_num1);
         tv2.setText("" + rand_num2);
-        tv3.setText("" + rand_num3);
-        tv4.setText("" + rand_num4);
-        tv5.setText("" + rand_num5);
-        tv6.setText("" + rand_num6);
+        tv3.setText("number");
+        tv4.setText("number");
+        tv5.setText("number");
+        tv6.setText("number");
 
         et1.setText(null);
         et2.setText(null);
         et3.setText(null);
-
-        score = ((double)sum/3) *100;
-        Toast.makeText(MainActivity.this, (sum+ "/3, "+score+"%"), Toast.LENGTH_SHORT).show();
-        sum = 0;
     }
 }

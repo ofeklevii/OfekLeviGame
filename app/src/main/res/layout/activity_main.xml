@@ -105,8 +105,8 @@
         android:layout_width="99dp"
         android:layout_height="70dp"
         android:layout_marginTop="42dp"
-        android:text="Button"
         android:onClick="check1"
+        android:text="check"
         app:layout_constraintEnd_toEndOf="@+id/iV1"
         app:layout_constraintStart_toStartOf="@+id/iV1"
         app:layout_constraintTop_toBottomOf="@+id/iV1" />
@@ -116,8 +116,8 @@
         android:layout_width="99dp"
         android:layout_height="70dp"
         android:layout_marginTop="42dp"
-        android:text="Button"
         android:onClick="check2"
+        android:text="check"
         app:layout_constraintEnd_toEndOf="@+id/iV2"
         app:layout_constraintStart_toStartOf="@+id/iV2"
         app:layout_constraintTop_toBottomOf="@+id/iV2" />
@@ -127,8 +127,8 @@
         android:layout_width="99dp"
         android:layout_height="70dp"
         android:layout_marginTop="42dp"
-        android:text="Button"
         android:onClick="check3"
+        android:text="check"
         app:layout_constraintEnd_toEndOf="@+id/iV3"
         app:layout_constraintStart_toStartOf="@+id/iV3"
         app:layout_constraintTop_toBottomOf="@+id/iV3" />
@@ -138,8 +138,8 @@
         android:layout_width="114dp"
         android:layout_height="70dp"
         android:layout_marginTop="16dp"
-        android:text="Next"
         android:onClick="restart"
+        android:text="restart"
         app:layout_constraintEnd_toEndOf="@+id/btn3"
         app:layout_constraintStart_toStartOf="@+id/btn1"
         app:layout_constraintTop_toBottomOf="@+id/btn2" />
